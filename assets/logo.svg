@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- R de Plus Jakarta Sans 800 en contornos (un favicon no puede cargar fuentes web). -->
+  <style>
+    path { fill: #b42318; }
+    /* Pestaña oscura: el rojo de la marca no se ve (1,8:1); se usa el rojo del tema noche del sitio. */
+    @media (prefers-color-scheme: dark) { path { fill: #ff7b70; } }
+  </style>
+  <path d="M17.53 91V9H48.9Q57.37 9 63.92 11.97Q70.47 14.94 74.21 20.78Q77.96 26.61 77.96 35.2Q77.96 43.56 74.1 49.45Q70.25 55.34 63.76 58.31L82.47 91H63.32L46.7 61.28H34.59V91ZM34.59 46.42H49.01Q52.64 46.42 55.28 44.99Q57.92 43.56 59.41 41.03Q60.9 38.5 60.9 35.2Q60.9 31.78 59.41 29.25Q57.92 26.72 55.28 25.29Q52.64 23.86 49.01 23.86H34.59Z"/>
+</svg>

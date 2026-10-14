@@ -1,31 +1,102 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Página de estado de Roldh Studio: https://status.roldhstudio.com
+# Solo se publican aquí los sitios con permiso expreso. Los sitios de clientes que no lo han dado se vigilan
+# en privado (Worker «roldh-vigilancia» del repositorio roldh-studio-web), nunca en este repositorio público.
+# Para hacer público un cliente: añadirlo en `sites` y quitarlo de vigilancia/sitios.json en roldh-studio-web.
+owner: harol237
+repo: roldh-status
+user-agent: harol237
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Roldh Studio
+    url: https://roldhstudio.com
+    slug: roldhstudio
+    maxResponseTime: 10000
+
+assignees:
+  - harol237
+
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.roldhstudio.com
+  name: Estado de Roldh Studio
+  logoUrl: https://status.roldhstudio.com/logo.svg
+  favicon: https://status.roldhstudio.com/favicon.png
+  faviconSvg: https://status.roldhstudio.com/favicon.svg
+  themeUrl: https://status.roldhstudio.com/roldh.css
+  introTitle: "Estado de los servicios de **Roldh Studio**"
+  introMessage: "Comprobamos cada 5 minutos que nuestros servicios responden. Si algo falla, lo sabemos al momento y nos ponemos a resolverlo. Volver a [roldhstudio.com](https://roldhstudio.com)."
   navbar:
-    - title: Status
+    - title: Estado
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: roldhstudio.com
+      href: https://roldhstudio.com
+  metaTags:
+    - name: description
+      content: "Estado en tiempo real de los servicios de Roldh Studio: disponibilidad y tiempo de respuesta."
+    - name: color-scheme
+      content: "light dark"
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Incidencias activas
+  allSystemsOperational: Todos los servicios funcionan con normalidad
+  incidentReport: "Informe de la incidencia n.º $NUMBER →"
+  activeIncidentSummary: Abierta el $DATE con $POSTS publicaciones
+  incidentTitle: Detalles de la incidencia $NUMBER
+  incidentDetails: Detalles de la incidencia
+  incidentFixed: Resuelta
+  incidentOngoing: En curso
+  incidentOpenedAt: Abierta el
+  incidentClosedAt: Cerrada el
+  incidentViewOnGitHub: Ver y seguir en GitHub
+  incidentCommentSummary: Publicado el $DATE por $AUTHOR
+  incidentBack: ← Volver a todas las incidencias
+  pastIncidents: Incidencias anteriores
+  pastIncidentsResolved: Resuelta en $MINUTES minutos con $POSTS publicaciones
+  liveStatus: Estado en directo
+  overallUptime: "Disponibilidad total: $UPTIME"
+  overallUptimeTitle: Disponibilidad total
+  averageResponseTime: "Tiempo medio de respuesta: $TIME ms"
+  averageResponseTimeTitle: Respuesta media
+  sevelDayResponseTime: Tiempo de respuesta de los últimos 7 días
+  responseTimeMs: Tiempo de respuesta (ms)
+  up: Operativo
+  down: Caído
+  degraded: Lento
+  ms: ms
+  loading: Cargando
+  navGitHub: GitHub
+  footer: "Esta página es de [código abierto]($REPO) y funciona con [Upptime](https://upptime.js.org)"
+  rateLimitExceededTitle: Demasiadas consultas
+  rateLimitExceededIntro: Has superado el número de consultas que se pueden hacer en una hora, así que tendrás que esperar antes de volver a abrir esta página. También puedes añadir un token de acceso personal de GitHub para seguir usándola.
+  rateLimitExceededWhatDoesErrorMean: ¿Qué significa este error?
+  rateLimitExceededErrorMeaning: Esta página usa la API de GitHub para consultar en tiempo real el estado de nuestros servicios. GitHub permite 60 consultas por hora a cada dirección IP, y ya las has usado.
+  rateLimitExceededErrorHowCanFix: ¿Cómo puedo solucionarlo?
+  rateLimitExceededErrorFix: Puedes esperar una hora a que se restablezca el límite de tu dirección IP, o añadir tu token de acceso personal de GitHub, que te da 5000 consultas más por hora.
+  rateLimitExceededGeneratePAT: Cómo generar un token de acceso personal
+  rateLimitExceededHasSet: Tienes un token de acceso personal configurado.
+  rateLimitExceededRemoveToken: Quitar el token
+  rateLimitExceededGitHubPAT: Token de acceso personal de GitHub
+  rateLimitExceededCopyPastePAT: Copia y pega tu token
+  rateLimitExceededSaveToken: Guardar el token
+  errorTitle: Se ha producido un error
+  errorIntro: No hemos podido obtener el estado más reciente.
+  errorText: Inténtalo de nuevo dentro de unos momentos.
+  errorHome: Ir a la página principal
+  pastScheduledMaintenance: Mantenimientos anteriores
+  scheduledMaintenance: Mantenimiento programado
+  scheduledMaintenanceSummaryStarted: Empezó el $DATE, durante $DURATION minutos
+  scheduledMaintenanceSummaryStarts: Empieza el $DATE, durante $DURATION minutos
+  startedAt: Empezó el
+  startsAt: Empieza el
+  duration: Duración
+  durationMin: $DURATION minutos
+  incidentCompleted: Completado
+  incidentScheduled: Programado
+  duration24H: 24 h
+  duration7D: 7 días
+  duration30D: 30 días
+  duration1Y: 1 año
+  durationAll: todo
+  locale: es-ES
