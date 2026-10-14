@@ -1,0 +1,83 @@
+/* Tema de Roldh Studio para la página de estado (colores y tipografía de roldhstudio.com). */
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 400; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 600; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 700; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-weight: 800; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-800-normal.woff2") format("woff2"); }
+
+:root {
+  color-scheme: light;
+  --body-background-color: #faf7f4;
+  --body-text-color: #1a1412;
+  --card-background-color: #ffffff;
+  --nav-background-color: #ffffff;
+  --nav-border-bottom-color: #ebe4df;
+  --nav-current-border-bottom-color: #b42318;
+  --card-border-color: #ebe4df;
+  --down-border-left-color: #b42318;
+  --down-background-color: #fbe9e7;
+  --degraded-border-left-color: #a8510a;
+  --up-border-left-color: #0f7a3d;
+  --tag-color: #ffffff;
+  --tag-up-background-color: #0f7a3d;
+  --tag-down-background-color: #b42318;
+  --tag-degraded-background-color: #a8510a;
+  --change-background-color: #a8510a;
+  --error-button-border-color: #911a12;
+  --error-button-background-color: #b42318;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #911a12;
+  --submit-button-background-color: #b42318;
+  --submit-button-color: #ffffff;
+  --graph-opacity: 1;
+  --graph-filter: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --body-background-color: #0f0c0b;
+    --body-text-color: #f5eeea;
+    --card-background-color: #1a1413;
+    --nav-background-color: #1a1413;
+    --nav-border-bottom-color: #2e2523;
+    --nav-current-border-bottom-color: #ff7b70;
+    --card-border-color: #2e2523;
+    --down-border-left-color: #ff7b70;
+    --down-background-color: #3a1512;
+    --degraded-border-left-color: #fbbf24;
+    --up-border-left-color: #4ade80;
+    --tag-color: #0f0c0b;
+    --tag-up-background-color: #4ade80;
+    --tag-down-background-color: #ff7b70;
+    --tag-degraded-background-color: #fbbf24;
+    --change-background-color: #fbbf24;
+    --error-button-border-color: #b42318;
+    --error-button-background-color: #d0342a;
+    --error-button-color: #ffffff;
+    --submit-button-border-color: #b42318;
+    --submit-button-background-color: #d0342a;
+    --submit-button-color: #ffffff;
+    --graph-opacity: 1;
+    --graph-filter: none;
+  }
+  a { color: #ff7b70; }
+}
+
+body,
+button,
+input {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+a { color: #a51e15; }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #b42318;
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
