@@ -81,3 +81,18 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Logo oficial en la barra (assets/logo.svg, se adapta solo al tema). El nombre de texto queda para lectores
+   de pantalla y para el título de la página, pero se oculta a la vista para no repetir «Roldh Studio». */
+nav .logo img {
+  height: 34px;
+  width: auto;
+}
+nav .logo > div {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
