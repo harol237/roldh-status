@@ -33,6 +33,10 @@ status-website:
     - title: roldhstudio.com
       href: https://roldhstudio.com
   metaTags:
+    - property: og:image
+      content: https://roldhstudio.com/og-image.png
+    - name: twitter:card
+      content: summary_large_image
     - name: description
       content: "Estado en tiempo real de los servicios de Roldh Studio: disponibilidad y tiempo de respuesta."
     - name: color-scheme
