@@ -32,9 +32,8 @@ status-website:
       href: /
     - title: roldhstudio.com
       href: https://roldhstudio.com
+  customHeadHtml: '<meta property="og:image" content="https://roldhstudio.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://roldhstudio.com/og-image.png">'
   metaTags:
-    - property: og:image
-      content: https://roldhstudio.com/og-image.png
     - name: twitter:card
       content: summary_large_image
     - name: description
