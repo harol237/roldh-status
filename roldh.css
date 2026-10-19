@@ -30,6 +30,8 @@
   --submit-button-color: #ffffff;
   --graph-opacity: 1;
   --graph-filter: none;
+  /* Color del gráfico de tiempos de respuesta (ver más abajo): gris de la marca, 4,7:1 sobre la tarjeta blanca. */
+  --grafico: #7a716c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,13 +61,16 @@
     --submit-button-color: #ffffff;
     --graph-opacity: 1;
     --graph-filter: none;
+    /* Gris claro de la marca, 5,7:1 sobre la tarjeta #1a1413. */
+    --grafico: #9a918c;
   }
   a { color: #ff7b70; }
 }
 
-body,
-button,
-input {
+/* «html body» gana a la regla «body» del global.css de Upptime, que se carga después y fija Roboto. */
+html body,
+html button,
+html input {
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
 h1, h2, h3 {
@@ -95,4 +100,23 @@ nav .logo > div {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* Gráfico de tiempos de respuesta: Upptime lo pone como imagen de fondo de la tarjeta (PNG verde menta, variable
+   --background). Se oculta y se vuelve a dibujar la misma curva en el color de la marca, usando el PNG como máscara
+   (mismo encuadre: contain, a la derecha y centrado). Vale para todos los sitios de la página. */
+article.graph {
+  background-image: none !important;
+  isolation: isolate;
+}
+article.graph::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background-color: var(--grafico);
+  -webkit-mask: var(--background) no-repeat 100% 50% / contain;
+  mask: var(--background) no-repeat 100% 50% / contain;
 }
