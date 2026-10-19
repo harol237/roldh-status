@@ -10,7 +10,7 @@ sites:
   - name: Roldh Studio
     url: https://roldhstudio.com
     slug: roldhstudio
-    icon: https://roldhstudio.com/favicon-32x32.png
+    icon: https://roldhstudio.com/favicon.svg
     maxResponseTime: 10000
 
 assignees:
